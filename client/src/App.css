@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.light{
+  background-color: #fff;
+}
+.dark header{
+  background-color: #37474f;
+  color: #f1f1f1;
+}
+
+/* Styling for header */
+header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 10px; 
+}
+
+.logo{
+  display: inline;
+  justify-content:start;
+}
+
+#byte{
+  position: relative;
+  bottom: 12px;
+  font-size: 45px;
+}
+
+#logoContainer{
+  display: inline;
+}
+
+
+#NavBar ul li {
+  display: inline;
+  padding-right: 15px;
+}
+
+#NavBar ul li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 23px;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#NavBar ul li a:hover{
+  background-position: 0;
+}
+
+.NavBar{
+  display: flex;
+  justify-content: center;
+}
+
+.toggle{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20%;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.mode{
+  
+}
