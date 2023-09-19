@@ -1,6 +1,7 @@
 import './App.css';
-import Header from './components/Header/Header';
 import { createContext, useState } from 'react';
+import {Routes, Route} from "react-router-dom"
+import Header from './components/Header/Header';
 import Post from './components/Post';
 
 export const ThemeContext = createContext(null);
@@ -12,15 +13,32 @@ function App() {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
 }
   return (
+
+    
+    
+
+      <Routes>
+
+        <Route index element={
     <ThemeContext.Provider value={{theme, toggleTheme}} >
-
-    <div className={`App ${theme}`}>
-      <Header />
-    </div>
-
-    <Post />
-
+      <div className={`App ${theme}`}>
+        <Header />
+        <Post />
+      </div>
     </ThemeContext.Provider>
+        } />
+
+        <Route path={'/login'} element={
+
+          <div></div>
+
+
+        }>
+
+
+        </Route>
+      </Routes>
+
 
 
   );

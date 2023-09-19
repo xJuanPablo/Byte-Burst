@@ -13,7 +13,7 @@ function Post() {
           <h2 className='postH2'>Community</h2>
           <p className='postText'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis quis dolores possimus minima et! Accusamus cumque nostrum doloribus, blanditiis, atque nobis sunt, dolor cupiditate porro maxime reprehenderit obcaecati sit.</p>
           <p className='postInfo'>
-            <a href="postAuthor" className='postAuthor'>xJuanPablo</a>
+            <a href="#" className='postAuthor'>xJuanPablo</a>
             <time>2023-09-18</time>
           </p>
         </div>
