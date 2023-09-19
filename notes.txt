@@ -1,0 +1,8 @@
+//SET UP CLIENT SIDE
+1. Set up server and client directory
+2. Open terminal in client folder and enter "npx create-react-app app-name"
+3. To start client side, run "npm start" in the terminal on the client side to install the dependencies, then run "npm start" to run the client side.
+
+//CLIENT SIDE
+1. CLEAN UP: In the App.js file, delete the content between first div tag in the App function. In the App.js file, delete the imported svg. Also delete the content in 'App.css'.
+2. Create components folder for each section of the HTML, structure and import them to the App.js.
