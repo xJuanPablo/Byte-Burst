@@ -4,7 +4,8 @@
 }
 
 .light{
-  background-color: #fff;
+  background-color: #f1f1f1;
+  height: 100vh;
 }
 .dark header{
   background-color: #37474f;
@@ -14,11 +15,12 @@
 /* Styling for header */
 header{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 3fr;
   align-items: center;
   gap: 10px; 
   margin-bottom: 8%;
-  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
 }
 
 .logo{
@@ -36,6 +38,12 @@ header{
   display: inline;
 }
 
+#NavBar ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:row;
+}
 
 #NavBar ul li {
   display: inline;
@@ -65,10 +73,7 @@ header{
   background-position: 0;
 }
 
-.NavBar{
-  display: flex;
-  justify-content: center;
-}
+
 
 .toggle{
   display: flex;
@@ -83,8 +88,36 @@ button{
 }
 
 
+@media screen and (max-width: 887px){
+  #NavBar,
+  .navLinks{
+    display: none;
+  } 
+  header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  #logoContainer{
+    margin: 0 auto;
+  }
+  #byte{
+    position: relative;
+    bottom: 10px;
+    font-size: 60px;
+  }
+  #planet{
+    size: 95px;
+  }
+}
+
+
+
 /* Styling for Post component */
 
+.content{
+  width: 90%;
+}
 
 .post{
   display: grid;
@@ -101,7 +134,9 @@ button{
 }
 
 .imgContainer{
-  width: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .content .postH2{
@@ -123,4 +158,28 @@ button{
 
 .postText{
   line-height: 1.5rem;
+}
+
+@media screen and (max-width: 1099px){
+  .post {
+    display: block;
+    grid-auto-columns: 49%;
+    }
+    .content{
+      display: grid;
+      justify-content: center;
+      width: 70%;
+      margin: 0 auto;
+    }
+    .postImg{
+      max-width: 100%;
+      border-radius: 22px;
+      margin-bottom: 7%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .content{
+      width: 100%;
+    }
 }
