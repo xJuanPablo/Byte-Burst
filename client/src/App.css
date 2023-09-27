@@ -76,7 +76,6 @@ header{
 .toggle{
   display: flex;
   justify-content: flex-end;
-  padding-right: 20%;
 }
 
 button{
@@ -196,7 +195,8 @@ button{
   border-right: 4px solid grey;
 }
 
-.loginForm{
+.login,
+.registerForm{
   max-width: 400px;
   margin: 0 auto;
 }
@@ -213,7 +213,8 @@ input{
   border-right: 2px solid grey;
 }
 
-#loginBtn{
+#loginBtn,
+#registerBtn{
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -229,7 +230,8 @@ form h2{
   margin: 30px 30px;
 }
 
-.loginForm p{
+.login p,
+.registerForm p{
   text-align: center;
   margin-top: 75px;
 }
