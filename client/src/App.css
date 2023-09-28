@@ -214,7 +214,8 @@ input{
 }
 
 #loginBtn,
-#registerBtn{
+#registerBtn,
+.postBtn {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -234,4 +235,15 @@ form h2{
 .registerForm p{
   text-align: center;
   margin-top: 75px;
+}
+
+/* ByteWrite Post Form */
+
+.postForm{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.postBtn{
+  margin-top: 15px;
 }

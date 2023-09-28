@@ -3,10 +3,17 @@ const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/User');
+const Post = require('./models/Post.js')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { error } = require('console');
 const cookieParser = require('cookie-parser');
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'});
+const fs =require('fs')
+
+
+
 require('dotenv').config()
 
 const salt = bcrypt.genSaltSync(10);
@@ -69,5 +76,28 @@ app.get('/profile', (req,res) =>{
 app.post('logout', (req,res) => {
   res.cookie('token', '').json('ok');
 });
+
+app.post('/post', upload.single('file') , async (req,res) => {
+  const {originalname, path} = req.file;
+  const parts = originalname.split('.');
+  const fileType = parts[parts.length - 1];
+  const UpdatedPath = `${path}.${fileType}`;
+  fs.renameSync(path,UpdatedPath)
+
+  const {title,summary,content} = req.body;
+  const postInfo = await Post.create({
+    title,
+    summary,
+    content,
+    img: UpdatedPath
+  })
+
+  res.json(postInfo)
+})
+
+app.get('/post', (req,res) => {
+  Post.find
+  res.json();
+})
 
 app.listen(4000);

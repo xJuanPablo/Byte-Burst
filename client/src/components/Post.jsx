@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Post() {
+
+  useEffect(() => {
+    fetch('/post').then(res => {
+      res.json().then(posts =>{
+        console.log(posts)
+      });
+    })
+
+  })
+
   return (
     <div id="homePost">
 
