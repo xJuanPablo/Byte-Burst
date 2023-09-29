@@ -29,10 +29,10 @@ function NavBar() {
   return (
     <nav id='NavBar'>
       <ul>
-        <Link className='navLinks' to='/'> Home </Link>
         {username && (
           <>
           <span>Hello, {username}!</span>
+          <div></div>
             <Link className='navLinks' to='/bytewrite'> ByteWrite</Link>
             <a onClick={logout} className='navLinks'>Logout</a>
           </>

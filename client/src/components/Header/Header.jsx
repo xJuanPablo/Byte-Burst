@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import NavBar from './components/NavBar'
-import { GiExplodingPlanet } from "react-icons/gi"
+import React, { useEffect, useState } from 'react';
+import NavBar from './components/NavBar';
+import { GiExplodingPlanet } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -17,15 +18,18 @@ function Header() {
 
   }, []);
   return (
+    <>
     <header>
       <div></div>
-      <div id='logoContainer divSize'>
+      <Link id='logoContainer divSize'  to={'/'}>
         <GiExplodingPlanet size={60} className='logo planet' id='planet'/> 
         <h1 className='logo' id='byte'>ByteBurst</h1>
-      </div>
+      </Link>
 
       <NavBar className='NavBar'/>
     </header>
+      <hr className='horizontal-line'/>
+    </>
   )
 }
 

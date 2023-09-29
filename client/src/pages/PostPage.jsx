@@ -12,27 +12,38 @@ function PostPage() {
     fetch(`http://localhost:4000/post/${id}`)
     .then(res => {
       res.json().then(postInfo => {
-        setPostInfo(postInfo)
+        setPostInfo(postInfo);
+        console.log(postInfo)
       })
     })
   },[])
   //TODO: Create page for bad request and navigate there
   if(!postInfo) return '';
   return (
-    <div>
+    <div id='singlePostBox'>
 
-      <div dangerouslySetInnerHTML={{__html:postInfo.title}} />
+      <div dangerouslySetInnerHTML={{__html:postInfo.title}} id='singlePostTitle'/>
+
+      <img src={`http://localhost:4000/${postInfo.img}`} id='singlePostImg' alt="" />
+      <div>
+      <div className='inline'>Written by: </div>
+        <div className='inline' dangerouslySetInnerHTML={{__html:postInfo.author.username}}/>
+        <div className='inline'> / </div>
+          <div className='inline' dangerouslySetInnerHTML={{__html:postInfo.createdAt}}/>
+      </div>
+      <div dangerouslySetInnerHTML={{__html:postInfo.summary}} id='singPostSummary'/>
+
+      <div dangerouslySetInnerHTML={{__html:postInfo.content}} id='singPostContent'/>
 
       {userInfo.id === postInfo.author._id && (
         <div> 
-          <Link to={`/edit/${postInfo._id}`}>Edit Post</Link>
+          <Link to={`/edit/${postInfo._id}`} className='inline'>Edit Post</Link>
+          <div className='inline'></div>
+          <div className='inline'>delete</div>
         </div>
       )}
-      <img src={`http://localhost:4000/${postInfo.img}`} alt="" />
 
-      <div dangerouslySetInnerHTML={{__html:postInfo.summary}} />
 
-      <div dangerouslySetInnerHTML={{__html:postInfo.content}} />
     </div>
   )
 }
