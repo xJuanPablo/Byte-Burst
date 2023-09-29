@@ -21,6 +21,7 @@ function ByteWrite() {
     data.set('content', content);
     data.set('file', imgFile[0])
 
+
     const response = await fetch('http://localhost:4000/post', {
       method: 'POST',
       body: data,

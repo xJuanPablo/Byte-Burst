@@ -80,10 +80,10 @@ app.post('logout', (req,res) => {
 });
 
 app.post('/post', upload.single('file') , async (req,res) => {
-  const {originalname, path} = req.file;
+  const { originalname, path } = req.file;
   const parts = originalname.split('.');
   const fileType = parts[parts.length - 1];
-  const UpdatedPath = `${path}.${fileType}`;
+  const UpdatedPath = `${path}.${fileType}`
   fs.renameSync(path,UpdatedPath)
 
   const {token} = req.cookies;
