@@ -1,30 +1,29 @@
-import React, { useEffect } from 'react'
+import React from 'react';
+import {formatISO9075} from 'date-fns';
+import { Link } from 'react-router-dom';
 
-function Post() {
-
-  useEffect(() => {
-    fetch('/post').then(res => {
-      res.json().then(posts =>{
-        console.log(posts)
-      });
-    })
-
-  })
-
+function Post({_id, title, summary, img, content, createdAt, author
+}) {
   return (
     <div id="homePost">
 
 
       <div className='post'>
         <div className="imgContainer">
-          <img src="https://m.media-amazon.com/images/M/MV5BZjk1NTA3NjQtMmY2Ni00MjA4LWExOGItODUzZTkyZDY3MDRjXkEyXkFqcGdeQW1yb2Njbw@@._V1_QL75_UX500_CR0,0,500,281_.jpg" alt="" className='postImg'/>
+          <Link to={`/post/${_id}`} >
+
+          <img src={'http://localhost:4000/'+img} alt="" className='postImg'/>
+
+          </Link>
         </div>
         <div className="content">
-          <h2 className='postH2'>Community</h2>
-          <p className='postText'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus officiis quis dolores possimus minima et! Accusamus cumque nostrum doloribus, blanditiis, atque nobis sunt, dolor cupiditate porro maxime reprehenderit obcaecati sit.</p>
+          <Link to={`/post/${_id}`} >
+            <h2 className='postH2'>{title}</h2>
+          </Link>
+          <p className='postText'>{summary}</p>
           <p className='postInfo'>
-            <a href="#" className='postAuthor'>xJuanPablo</a>
-            <time>2023-09-18</time>
+            <a href="#" className='postAuthor'>{author.username}</a>
+            <time>{formatISO9075(new Date(createdAt))}</time>
           </p>
         </div>
       </div>
@@ -34,4 +33,4 @@ function Post() {
   )
 }
 
-export default Post
+export default Post;

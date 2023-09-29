@@ -32,6 +32,7 @@ function NavBar() {
         <Link className='navLinks' to='/'> Home </Link>
         {username && (
           <>
+          <span>Hello, {username}!</span>
             <Link className='navLinks' to='/bytewrite'> ByteWrite</Link>
             <a onClick={logout} className='navLinks'>Logout</a>
           </>

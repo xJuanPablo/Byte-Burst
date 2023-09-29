@@ -1,11 +1,13 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom"
-import Post from './components/Post';
 import Layout from './Layout';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
-import ByteWrite from './components/ByteWrite/ByteWrite';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import IndexPage from './pages/IndexPage';
+import ByteWrite from './pages/ByteWritePage';
 import { UserContextProvider } from './context/UserContext';
+import PostPage from './pages/PostPage';
+import EditPostPage from './pages/EditPostPage';
 
 
 function App() {
@@ -19,11 +21,13 @@ function App() {
       <UserContextProvider>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Post/>} />
+            <Route index element={<IndexPage/>} />
             <Route path={'/login'} element={<Login />} />
             <Route path={'/register'} element={<Register />} />
             <Route path={'/bytewrite'} element={<ByteWrite />} />
-          </Route>
+            <Route path="/post/:id" element={<PostPage />}/>
+            <Route path="/edit/:id" element={<EditPostPage />}/>
+            </Route>
         </Routes>
       </UserContextProvider>
   );
