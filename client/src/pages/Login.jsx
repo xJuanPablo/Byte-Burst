@@ -32,7 +32,8 @@ function Login() {
   }
 
   return (
-    <div className='formBox'>
+    <div className='loginDiv'>
+    <div className='formBox '>
       <form action="" className='login' onSubmit={login}>
         <h2>Login using your account information</h2>
         <input type="text" placeholder='Username' value={username} onChange={e => setUsername(e.target.value)}/>
@@ -41,7 +42,7 @@ function Login() {
 
         <p>Don't have an account? You can register <Link to="/register">Here</Link></p>
       </form>
-      
+    </div>
     </div>
   )
 }

@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import IndexPage from './pages/IndexPage';
 import ByteWrite from './pages/ByteWritePage';
 import { UserContextProvider } from './context/UserContext';
+import { ThemeContextProvider } from './context/ThemeContext';
 import PostPage from './pages/PostPage';
 import EditPostPage from './pages/EditPostPage';
 
@@ -17,7 +18,7 @@ function App() {
   return (
 
     
-    
+    <ThemeContextProvider>
       <UserContextProvider>
         <Routes>
           <Route path='/' element={<Layout />}>
@@ -30,6 +31,7 @@ function App() {
             </Route>
         </Routes>
       </UserContextProvider>
+    </ThemeContextProvider>
   );
 }
 

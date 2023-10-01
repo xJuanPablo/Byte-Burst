@@ -7,13 +7,9 @@ body{
   background-color: #f1f1f1;
 }
 
-.light{
-  background-color: #f1f1f1;
-  height: 100vh;
-}
-.dark header{
-  background-color: #37474f;
-  color: #f1f1f1;
+
+.dark{
+  background-color: #222;
 }
 
 /* Styling for header */
@@ -29,7 +25,13 @@ header{
 
 .logo{
   display: inline-flex;
-  color: #000;
+}
+
+.light .logo{
+  background-color: #f1f1f1;
+}
+.dark .logo{
+  color: #f1f1f1;
 }
 
 #byte{
@@ -53,7 +55,8 @@ header{
 #NavBar ul .navLinks,
 .logo,
 #planet,
-.postImg {
+.postImg,
+.postH2 {
   text-decoration: none;
   color: black;
   font-weight: 800;
@@ -72,7 +75,30 @@ header{
   transition: all 0.3s ease-in-out;
 }
 
-#NavBar ul .navLinks:hover{
+#NavBar ul .navLinks:hover,
+.logo:hover{
+  background-position: 0;
+}
+
+.dark #NavBar ul .navLinks,
+.dark .logo, 
+.dark #planet,
+.dark .postImg,
+.dark .postH2{
+  color: #f1f1f1;
+  font-weight: 800;
+  background-image: linear-gradient(
+    to right,
+    #a563a8,
+    #7d54d6 50%,
+    #f1f1f1 50%
+  );
+}
+.dark .logo{
+  color: #f1f1f1;
+}
+
+.dark #NavBar ul .navLinks:hover{
   background-position: 0;
 }
 
@@ -83,6 +109,10 @@ header{
   justify-content: flex-end;
 }
 
+.sun{
+  color: #f1f1f1;
+}
+
 button{
   background-color: transparent;
   cursor: pointer;
@@ -90,10 +120,15 @@ button{
 }
 
 .horizontal-line {
-  border-top: 4px solid black;
+  border: 2px solid black;
   width: 93%;
   margin: 0 auto;
   margin-bottom: 7%;
+  border-radius: 15px;
+}
+
+.dark .horizontal-line {
+  border: 2px solid #f1f1f1;
 }
 
 
@@ -220,6 +255,10 @@ button{
   margin: 0 auto;
 }
 
+.login{
+  padding-bottom: 20%;
+}
+
 input{
   display: block;
   margin-bottom: 20px;
@@ -254,6 +293,10 @@ form h2{
 .registerForm p{
   text-align: center;
   margin-top: 75px;
+}
+
+.loginDiv{
+  height: 100vh;
 }
 
 /* ByteWrite Post Form */
@@ -305,4 +348,28 @@ form h2{
   line-height: 24px;
   word-spacing: 2px;
   font-weight: 500;
+}
+
+
+/* Update Post */
+
+.dark .updateDiv{
+  height: 100vh;
+  width:95%;
+  background-color: #222;
+  margin: 0 auto;
+  
+}
+
+.Formbox{
+  border: 2px #222 solid;
+  background-color: #f1f1f1;
+  padding: 3%;
+  border-radius: 9px;
+}
+
+.dark .Formbox{
+  border: 2px #f1f1f1 solid;
+  padding: 3%;
+  background-color: rgb(109, 107, 107);
 }

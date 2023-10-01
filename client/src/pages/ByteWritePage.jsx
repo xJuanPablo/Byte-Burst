@@ -37,7 +37,8 @@ function ByteWrite() {
     return <Navigate to={'/'} />
   }
   return (
-    <div className='postForm'>
+    <div className='updateDiv'>
+    <div className='Formbox'>
       <form onSubmit={createPost}>
         <input type="title" placeholder={'Title'} value={title} onChange={e => setTitle(e.target.value)}/>
         <input type='summary' placeholder={`What's on your mind?`} value={summary} onChange={e => setSummary(e.target.value)}></input>
@@ -45,6 +46,7 @@ function ByteWrite() {
         <Editor value={content} onChange={setContent}/>
         <button className='postBtn'>Create Post</button>
       </form>
+    </div>
     </div>
   )
 }

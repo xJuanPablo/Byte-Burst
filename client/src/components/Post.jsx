@@ -2,7 +2,7 @@ import React from 'react';
 import {formatISO9075} from 'date-fns';
 import { Link } from 'react-router-dom';
 
-function Post({_id, title, summary, img, content, createdAt, author
+function Post({_id, title, summary, img, createdAt, author
 }) {
   return (
     <div id="homePost">
@@ -18,7 +18,7 @@ function Post({_id, title, summary, img, content, createdAt, author
         </div>
         <div></div>
         <div className="content">
-          <Link to={`/post/${_id}`} >
+          <Link to={`/post/${_id}`} style={{ textDecoration: 'none' }}>
             <h2 className='postH2'>{title}</h2>
           </Link>
           <p className='postText'>{summary}</p>
