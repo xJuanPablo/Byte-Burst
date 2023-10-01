@@ -47,14 +47,16 @@ function EditPostPage() {
     return <Navigate to={`/post/${id}`} />
   }
   return (
-    <div className='postForm'>
-      <form onSubmit={updatePost}>
+    <div className='updateDiv'>
+    <div className='Formbox' >
+      <form onSubmit={updatePost} className='updateForm'>
         <input type="title" placeholder={'Title'} value={title} onChange={e => setTitle(e.target.value)}/>
         <input type='summary' placeholder={`What's on your mind?`} value={summary} onChange={e => setSummary(e.target.value)}></input>
         <input type="file" onChange={e => setImgFile(e.target.files)}/>
         <Editor onChange={setContent} value={content}/>
         <button className='postBtn'>Update Post</button>
       </form>
+    </div>
     </div>
   )
 }

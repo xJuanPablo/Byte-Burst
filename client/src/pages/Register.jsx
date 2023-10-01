@@ -20,6 +20,7 @@ function Register() {
   }
 
   return (
+    <div className='loginDiv'>
     <div className='formBox'>
       <form action="" className='registerForm' onSubmit={register}>
         <h2>It's Great To Meet You! Sign Up Here!</h2>
@@ -29,7 +30,7 @@ function Register() {
 
         <p>Already have an account? You can login <Link to='/login'>Here</Link></p>
       </form>
-      
+    </div>
     </div>
   )
 }
