@@ -3,16 +3,16 @@
 Byte-Burst is a dynamic full-stack web application crafted to hone my development skills. As the sole developer behind this project, it showcases my proficiency in both front-end and back-end technologies. With CRUD (Create, Read, Update, Delete) capabilities, Byte-Burst allows users to effortlessly compose and edit their blog posts.
 
 ## Table of Contents
-* [Video Demo]()
-* [Key Features]()
-* [What's to Come]()
-* [Built With]()
-* [NPM Packages]()
-* [Using]()
-* [Installation]()
-* [Contributing]()
-* [Contact]()
-* [License]()
+* [Video Demo](#video-demo)
+* [Key Features](#key-features)
+* [What's to Come](#whats-to-come)
+* [Built With](#built-with)
+* [NPM Packages](#npm-packages)
+* [Using](#using)
+* [Installation](#installation)
+* [Contributing](#contributing-to-byte-burst)
+* [Contact](#contact)
+* [License](#license)
 ## Video Demo
 
 ## Key Features
@@ -63,19 +63,6 @@ Byte-Burst is a dynamic full-stack web application crafted to hone my developmen
 | <a href='https://www.npmjs.com/package/express'><img src="https://img.shields.io/badge/express%20-8A2BE2" width="100" height="30" alt="express"></a> | 4.18.2 | <a href='https://www.npmjs.com/package/jsonwebtoken'><img src="https://img.shields.io/badge/jsonwebtoken%20-8A2BE2" width="100" height="30" alt="jsonwebtoken"></a> | 9.0.2 | <a href='https://www.npmjs.com/package/mongoose'><img src="https://img.shields.io/badge/Mongoose%20-8A2BE2" width="100" height="30" alt="Mongoose"></a> | 7.5.4 |
 | <a href='https://www.npmjs.com/package/multer'><img src="https://img.shields.io/badge/Multer%20-8A2BE2" width="100" height="30" alt="Multer"></a> | 1.4.5-lts.1 | <a href='https://www.npmjs.com/package/react'><img src='https://img.shields.io/badge/React%20-8A2BE2' width="100" height="30" alt='React' ></a> | 18.2.0 | <a href='https://www.npmjs.com/package/react-dom'><img src='https://img.shields.io/badge/react-dom%20-8A2BE2' width="100" height="30" alt='react-dom' ></a> | 18.2.0 |
 | <a href='https://www.npmjs.com/package/react-icons'><img src='https://img.shields.io/badge/React%20Icons%20-8A2BE2' width="100" height="30" alt='React Icons' ></a> | 4.11.0 | <a href='https://www.npmjs.com/package/react-quill'><img src='https://img.shields.io/badge/ReactQuill%20-8A2BE2' width="100" height="30" alt='ReactQuill' ></a> | 2.0.0 | <a href='https://www.npmjs.com/package/react-router-dom'><img src='https://img.shields.io/badge/React%20Router%20DOM%20-8A2BE2' width="100" height="30" alt='React Router DOM' ></a>  | 6.16.0 |
-
-
-<!-- | Version | Package | Version | Package | Version | Package |
-| --------| --------| --------| --------| --------| --------|
-| 5.1.0 | [concurrently](https://www.npmjs.com/package/concurrently/v/5.1.0) | 2.4.3 | [bcrypt.js](https://www.npmjs.com/package/bcryptjs) | 2.30.0 | [date-fns](https://www.npmjs.com/package/date-fns) |
-| 1.4.6 | [cookie-parser](https://www.npmjs.com/package/cookie-parser) | 2.8.5 | [CORS](https://www.npmjs.com/package/cors) | 16.3.1 | [dotenv](https://www.npmjs.com/package/dotenv) |
-| 4.18.2 | [express](https://www.npmjs.com/package/express) | 9.0.2 | [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | 4.11.0 | [React Icons](https://www.npmjs.com/package/react-icons) |
-| 7.5.4 | [Mongoose](https://www.npmjs.com/package/mongoose) | 1.4.5-lts.1 | [Multer](https://www.npmjs.com/package/multer) |
-| 6.16.0 | [React Router DOM](https://www.npmjs.com/package/react-router-dom) | 18.2.0 | [React](https://www.npmjs.com/package/react) | 18.2.0 | [react-dom](https://www.npmjs.com/package/react-dom) |
-| 2.0.0 | [ReactQuill](https://www.npmjs.com/package/react-quill) | -->
-
-
-
 
 
 ## Using 
