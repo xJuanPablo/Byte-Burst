@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Orienta&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -27,9 +30,6 @@ header{
   display: inline-flex;
 }
 
-.light .logo{
-  background-color: #f1f1f1;
-}
 .dark .logo{
   color: #f1f1f1;
 }
@@ -41,21 +41,16 @@ header{
 }
 
 
-#NavBar ul{
+ul{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-/* #NavBar ul li {
-  display: inline;
-  padding-right: 15px;
-} */
+
 
 #NavBar ul .navLinks,
 .logo,
-#planet,
-.postImg,
 .postH2 {
   text-decoration: none;
   color: black;
@@ -75,15 +70,12 @@ header{
   transition: all 0.3s ease-in-out;
 }
 
-#NavBar ul .navLinks:hover,
-.logo:hover{
+#NavBar ul .navLinks:hover{
   background-position: 0;
 }
 
 .dark #NavBar ul .navLinks,
 .dark .logo, 
-.dark #planet,
-.dark .postImg,
 .dark .postH2{
   color: #f1f1f1;
   font-weight: 800;
@@ -162,13 +154,12 @@ button{
 
 .content{
   width: 90%;
-  padding-left: 5%;
 }
 
 .post{
   display: grid;
   grid-template-columns: 2fr .2fr 2fr;
-  margin-bottom: 35px;
+  padding-bottom: 40px;
   justify-content: space-around;
   margin-left: 35px;
   margin-right: 35px;
@@ -186,29 +177,45 @@ button{
 }
 
 .content .postH2{
-  margin: 0;
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 25px;
+  font-family: 'Orienta', sans-serif;
 }
 
 .postInfo{
-  margin: 0 auto;
   color: #333;
   font-size: .7rem;
   display: flex;
   gap: 13px;
+  justify-content: center;
+  font-size: 13px;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+.dark .postInfo{
+  color:antiquewhite
 }
 
 .postAuthor{
   color: #333;
 }
 
+.dark .postAuthor{
+  color:antiquewhite;
+}
+
 .postText{
+  font-style: italic;
   line-height: 1.5rem;
   font-size: 20px;
-  letter-spacing: 3px;
-  margin-bottom: 17px;
+  letter-spacing: .05rem;
+  padding-bottom: 17px;
+  font-family: 'Biryani', sans-serif;
+}
+
+.dark .postText{
+  color: #f1f1f1;
 }
 
 @media screen and (max-width: 1099px){

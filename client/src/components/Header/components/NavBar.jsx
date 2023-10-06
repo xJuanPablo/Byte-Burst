@@ -31,7 +31,7 @@ function NavBar() {
       <ul>
         {username && (
           <>
-          <span>Hello, {username}!</span>
+          {/* <span>Hello, {username}!</span> */}
           <div></div>
             <Link className='navLinks' to='/bytewrite'> ByteWrite</Link>
             <a onClick={logout} className='navLinks'>Logout</a>
