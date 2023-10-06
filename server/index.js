@@ -22,10 +22,16 @@ app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 
+
+
 app.use('/uploads', express.static(`${__dirname}/uploads`))
 
 
 mongoose.connect(process.env.MONGO_DB);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 app.post('/register', async (req, res) => {
   const {username, password} = req.body;
