@@ -20,12 +20,12 @@ app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
 app.use(express.json());
 app.use(cookieParser());
 
-
-
 app.use('/uploads', express.static(`${__dirname}/uploads`))
 
+const connectionString = process.env.MONGO_DB;
 
-mongoose.connect(process.env.MONGO_DB, {
+
+mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
