@@ -11,9 +11,7 @@ const multer = require('multer');
 const upload = multer({dest: 'uploads/'});
 const fs =require('fs')
 
-
-
-require('dotenv').config()
+require('dotenv').config({ path: './.env' });
 
 const salt = bcrypt.genSaltSync(10);
 const secret = process.env.SECRET_KEY;
@@ -34,7 +32,7 @@ mongoose.connect(process.env.MONGO_DB, {
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/public/index.html'));
 });
 
 app.post('/register', async (req, res) => {
