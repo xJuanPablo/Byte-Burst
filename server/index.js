@@ -27,7 +27,11 @@ app.use(cookieParser());
 app.use('/uploads', express.static(`${__dirname}/uploads`))
 
 
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect(process.env.MONGO_DB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
